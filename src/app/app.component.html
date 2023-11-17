@@ -1,0 +1,24 @@
+<div class="github-star-badge video-preview">
+  <zxing-scanner [torch]="torchEnabled" [device]="deviceCurrent" (deviceChange)="onDeviceChange($event)"
+    (scanSuccess)="onCodeResult($event)" [formats]="formatsEnabled" [tryHarder]="tryHarder"
+    (permissionResponse)="onHasPermission($event)" (camerasFound)="onCamerasFound($event)"
+    (torchCompatible)="onTorchCompatible($event)" class="w-full h-full"></zxing-scanner>
+</div>
+<br />
+<span class="text">Điều chỉnh sao cho mã Qrcode nằm trong khung này</span>
+
+<br />
+<table border="1">
+  <tr>
+    <th>Loại vé</th>
+    <th>Ngày sổ</th>
+    <th>Ký hiệu</th>
+    <th>Mã dự thưởng</th>
+  </tr>
+  <tr>
+    <td class="">{{ticketType}}</td>
+    <td class="">{{dateReward}}</td>
+    <td class="">{{kyHieu}}</td>
+    <td class="">{{ticketNumber}}</td>
+  </tr>
+</table>
